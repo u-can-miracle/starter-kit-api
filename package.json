@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/server.ts",
-    "debug": "./node_modules/.bin/nodemon --config nodemon-debug.json",
+    "dev": "./node_modules/.bin/nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -19,6 +19,7 @@
     "typescript": "^3.3.3"
   },
   "devDependencies": {
+    "nodemon": "^1.18.10",
     "tslint": "^5.12.1",
     "tslint-eslint-rules": "^5.4.0"
   }

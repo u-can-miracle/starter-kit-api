@@ -1,4 +1,4 @@
-# Use node
+# Use node 10.15.1
 FROM node:10.15.1
 
 # Copy source code
@@ -14,4 +14,4 @@ RUN npm install
 EXPOSE 3001
 
 # Launch application
-CMD ["npm","start"]
+CMD ["npm","run", "dev"]
