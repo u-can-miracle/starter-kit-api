@@ -34,5 +34,7 @@ const db = {
 	}
 }
 
+db.connect()
+
 // Use connect method to connect to the server
 export default db

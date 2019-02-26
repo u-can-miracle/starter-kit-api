@@ -7,8 +7,8 @@ COPY . /app
 # Change working directory
 WORKDIR /app
 
-# Install dependencies
-RUN npm install
+# Share dependencies
+VOLUME /node_modules
 
 # Expose API port to the outside
 EXPOSE 3001

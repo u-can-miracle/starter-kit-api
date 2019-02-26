@@ -6,7 +6,6 @@ services:
     - "3001:3001"
     - "9229:9229"
     volumes:
-      # <host-directory>:<container-directory> this says map the current directory from your system to the /app directory in the docker container
       - .:/app
     depends_on:
     - mongo

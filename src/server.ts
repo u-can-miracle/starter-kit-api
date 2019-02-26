@@ -1,11 +1,7 @@
+import from './db/init' // just for launching db
 import * as express from 'express'
-import db from './db/init'
 
 const app = express()
-
-setTimeout(() => {
-	db.connect()
-}, 2500)
 
 app.get('/', (req, res) => {
 	// tslint:disable-next-line
