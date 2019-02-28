@@ -1,6 +1,7 @@
 import { MongoClient } from 'mongodb'
+import envs from '../envs'
 
-const url = 'mongodb://mongo:27017'
+const mongoUrl = envs.dbPath
 const dbName = 'dbName'
 
 const options = {
@@ -15,7 +16,7 @@ let mongoDb
 
 const db = {
 	connect: () => {
-		MongoClient.connect(url, options, (err, client) => {
+		MongoClient.connect(mongoUrl, options, (err, client) => {
 			if(err){
 				// tslint:disable-next-line
 				console.log('err', err)
@@ -35,6 +36,5 @@ const db = {
 }
 
 db.connect()
-
 // Use connect method to connect to the server
 export default db

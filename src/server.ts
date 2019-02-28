@@ -1,7 +1,11 @@
-import from './db/init' // just for launching db
+import './db/init' // just for launching db
 import * as express from 'express'
 
+import appConfig from './appConfig'
+
 const app = express()
+
+appConfig(app)
 
 app.get('/', (req, res) => {
 	// tslint:disable-next-line
