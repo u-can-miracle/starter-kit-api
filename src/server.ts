@@ -17,7 +17,7 @@ process.on('uncaughtException', (err) => {
 	console.log('Oops! err: ', err) //TODO change to winston
 })
 
-app.listen(3001, () => {
+app.listen(3002, () => {
 	// tslint:disable-next-line
 	console.log(`Listening at port: 3001`)
 })

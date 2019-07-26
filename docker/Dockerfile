@@ -1,5 +1,6 @@
-# Use node 10.15.1
-FROM node:10.15.1
+# Use node 11.10.1
+FROM node:11.10.1
+
 
 # Copy source code
 COPY . /app
@@ -11,7 +12,7 @@ WORKDIR /app
 VOLUME /node_modules
 
 # Expose API port to the outside
-EXPOSE 3001
+EXPOSE 3002
 
 # Launch application
 CMD ["npm","run", "dev"]
