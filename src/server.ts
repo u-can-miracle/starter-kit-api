@@ -1,4 +1,3 @@
-import './db/init' // just for launching db
 import * as express from 'express'
 
 import appConfig from './appConfig'
@@ -12,12 +11,17 @@ app.get('/', (req, res) => {
 	res.send("Awesome! We're live debugging this!")
 })
 
+app.post('/redox/test', (req, res) => {
+	console.log('/redox/test called')
+	res.send(200)
+})
+
 process.on('uncaughtException', (err) => {
 	// tslint:disable-next-line
 	console.log('Oops! err: ', err) //TODO change to winston
 })
 
-app.listen(3002, () => {
+app.listen(80, () => {
 	// tslint:disable-next-line
 	console.log(`Listening at port: 3001`)
 })
